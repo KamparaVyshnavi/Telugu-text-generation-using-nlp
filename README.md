@@ -6,7 +6,6 @@ This project explores Telugu text generation using classical Natural Language Pr
 
 The model was trained on a collection of Telugu newspaper articles from Andhrajyothi and uses N-gram language models to learn word patterns and generate text. Different N-gram models were compared to understand how increasing context affects text generation quality and model performance.
 
----
 
 ## Dataset
 
@@ -14,7 +13,6 @@ The dataset contains 10,821 Telugu newspaper articles collected from Andhrajyoth
 
 After preprocessing, the corpus contained roughly 1.79 million words with a vocabulary of about 198,000 unique words.
 
----
 
 ## Preprocessing
 
@@ -28,7 +26,6 @@ A manually prepared Telugu stopword list was used to remove frequently occurring
 
 Finally, a simple rule-based stemming approach was applied by removing common Telugu suffixes. This helped reduce vocabulary size and group related word forms together.
 
----
 
 ## Language Models
 
@@ -47,7 +44,6 @@ The trigram model uses the previous two words, while the quadgram model uses the
 
 To avoid zero probabilities for unseen word combinations, Laplace (Add-One) smoothing was used during probability estimation.
 
----
 
 ## Text Generation
 
@@ -57,7 +53,6 @@ Using the learned N-gram probabilities, the model repeatedly predicts the most l
 
 For example, starting with a seed word such as "విద్యుత్తు", the model generates a continuation based on patterns observed in the training corpus.
 
----
 
 ## Evaluation
 
@@ -67,7 +62,6 @@ Perplexity measures how well a model can predict a sequence of words. Lower perp
 
 Among all the models tested, the bigram model achieved the best result with a perplexity of 55.95.
 
----
 
 ## Observations
 
@@ -81,13 +75,11 @@ Although trigram and quadgram models had access to more context, they suffered f
 
 The generated text was able to capture common Telugu news-writing patterns, although repetition occasionally appeared due to the nature of N-gram based generation.
 
----
 
 ## Technologies Used
 
 Python was used for implementation along with the Indic NLP Library for Telugu tokenization. The experiments were performed in Jupyter Notebook.
 
----
 
 ## Project Structure
 
@@ -99,7 +91,6 @@ telugu-text-generation/
 └── README.md
 ```
 
----
 
 ## Future Work
 
@@ -111,7 +102,6 @@ Some possible improvements include:
 * Neural language models such as LSTM or GRU
 * Transformer-based Telugu text generation
 
----
 
 ## Conclusion
 
